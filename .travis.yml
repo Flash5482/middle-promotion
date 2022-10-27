@@ -11,3 +11,8 @@ before_script:
 script:
   - ng lint
   - ng build --prod --base-href https://t-palmer.github.io/middle-promotion/
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
