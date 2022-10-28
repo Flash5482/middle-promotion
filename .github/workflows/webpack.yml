@@ -1,17 +1,18 @@
-name: CI/CD
+name: NodeJS with Webpack
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "develop" ]
+    branches: [ "main" ]
 
 jobs:
   build:
-    runs-on: [ubuntu-latest]
+    runs-on: ubuntu-latest
+
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [14.x, 16.x, 18.x]
 
     steps:
       - uses: actions/checkout@v3
@@ -21,26 +22,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Set up Go
-
-        uses: actions/setup-go@v3
-        with:
-          go-version: 1.18
-
-    - name: Install
+      - name: Build
         run: |
           npm install
-
-    - name: JS Linter
-        run: npm run lint
-
-    - name: CSS Linter
-        run: npm run stylelint
-
-
-    - name: Unit Tests
-        run: npx ng test --watch=false --progress=false --browsers=ChromeHeadless
-
-        - name: Build
-          run: |
-            npx ng build --base-href=/middle-promotion/
+          npx webpack
