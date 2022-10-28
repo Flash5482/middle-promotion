@@ -22,7 +22,20 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Build
+  - name: Install
       run: |
         npm install
-        npx webpack
+
+  - name: JS Linter
+      run: npm run lint
+
+  - name: CSS Linter
+  run: npm run stylelint
+
+
+  - name: Unit Tests
+      run: npx ng test --watch=false --progress=false --browsers=ChromeHeadless
+
+    - name: Build
+      run: |
+        npx ng build --base-href=/middle-promotion/
