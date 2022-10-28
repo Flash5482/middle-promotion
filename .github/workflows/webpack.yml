@@ -30,7 +30,7 @@ jobs:
       run: npm run lint
 
   - name: CSS Linter
-  run: npm run stylelint
+      run: npm run stylelint
 
 
   - name: Unit Tests
