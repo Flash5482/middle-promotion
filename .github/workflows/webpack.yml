@@ -27,13 +27,13 @@ jobs:
           go-version: 1.18
 
       - name: Install
-          run: npm install
+        run: npm install
 
       - name: JS Linter
-          run: npm run lint
+        run: npm run lint
 
       - name: CSS Linter
-          run: npm run stylelint
+        run: npm run stylelint
 
 
       - name: Unit Tests
