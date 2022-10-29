@@ -40,4 +40,4 @@ jobs:
         run: npx ng test --watch=false --progress=false --browsers=ChromeHeadless
 
       - name: Build
-          run: npx ng build --base-href=/middle-promotion/
+        run: npx ng build --base-href=/middle-promotion/
