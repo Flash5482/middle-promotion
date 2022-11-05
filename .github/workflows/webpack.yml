@@ -37,7 +37,7 @@ jobs:
 
 
       - name: Unit Tests
-        run: npx ng test --watch=false --progress=false --browsers=ChromeHeadless
+        run: npm run test
 
       - name: Build
         run: npx ng build --base-href=/middle-promotion/
