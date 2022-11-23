@@ -11,6 +11,6 @@ export class AuthRedirectGuard implements CanActivate {
     return this.checkUserStatus();
   }
   private checkUserStatus(): UrlTree {
-      return this.route.createUrlTree(['auth']);
+      return this.route.createUrlTree(['auth/login']);
   }
 }

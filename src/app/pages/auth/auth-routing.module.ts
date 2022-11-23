@@ -6,8 +6,21 @@ const routes: Routes = [
   {
     path: '',
     component: AuthComponent,
-    pathMatch: 'full'
-  }
+    children: [
+      {
+        path: '',
+        redirectTo: 'login',
+        pathMatch: 'full',
+      },
+      {
+        path: 'login',
+        loadChildren: () =>
+          import('./components/login/login.module').then(
+            (m) => m.LoginModule
+          ),
+      },
+    ],
+  },
 ];
 
 @NgModule({
