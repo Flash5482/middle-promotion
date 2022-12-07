@@ -15,8 +15,15 @@ const routes: Routes = [
       {
         path: 'login',
         loadChildren: () =>
-          import('./components/login/login.module').then(
+          import('./shared/login/login.module').then(
             (m) => m.LoginModule
+          ),
+      },
+      {
+        path: 'sign-up',
+        loadChildren: () =>
+          import('./shared/sign-up/sign-up.module').then(
+            (m) => m.SignUpModule
           ),
       },
     ],
