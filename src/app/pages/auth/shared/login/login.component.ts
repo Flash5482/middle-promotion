@@ -1,29 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { loginBgUrl } from "../../const";
-import { LoginFormService } from "./services";
-import { FormGroup } from "@angular/forms";
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  viewProviders: [LoginFormService]
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent {
 
   readonly loginBgUrl = loginBgUrl;
 
-  constructor(private formService: LoginFormService) { }
+  constructor() { }
 
-  get form(): FormGroup {
-    return this.formService.form;
+  onGoogleLogin(){
+
   }
 
-  get valid(): boolean {
-    return this.formService.valid;
-  }
+  onFacebookLogin(){
 
-  ngOnInit(): void {
-    this.formService.buildForm();
   }
 }

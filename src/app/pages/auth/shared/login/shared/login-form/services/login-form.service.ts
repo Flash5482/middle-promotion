@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { BaseFormService } from "../../../../../shared/services";
+import { BaseFormService } from "../../../../../../../shared/services";
 import { FormBuilder, Validators } from "@angular/forms";
-import { ILoginFormValue } from "../interfaces";
-import { LoginControl } from "../enums";
+import { ILoginFormValue } from "../../../interfaces";
+import { LoginControl } from "../../../enums";
 
 @Injectable()
 export class LoginFormService extends BaseFormService<ILoginFormValue> {

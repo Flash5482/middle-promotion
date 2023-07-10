@@ -5,6 +5,7 @@ import { LoginRoutingModule } from "./login-routing.module";
 import { FormBuilder } from "@angular/forms";
 import { shared } from "./shared";
 import { LayoutModule } from "../../../../layout/layout.module";
+import { MatButtonModule } from "@angular/material/button";
 
 
 
@@ -14,7 +15,8 @@ import { LayoutModule } from "../../../../layout/layout.module";
     CommonModule,
     LoginRoutingModule,
     LayoutModule,
-    shared
+    shared,
+    MatButtonModule
   ],
   providers: [FormBuilder],
   exports: [LoginComponent]
