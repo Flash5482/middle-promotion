@@ -1,9 +1,10 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 
 import { LoginFormService } from "./services";
 import { FormGroup } from "@angular/forms";
 import { LoginControl } from "../../enums";
+import { ILoginFormValue } from "../../interfaces";
 
 @Component({
   selector: 'app-login-form',
@@ -14,6 +15,8 @@ import { LoginControl } from "../../enums";
 })
 export class LoginFormComponent implements OnInit {
   readonly loginControl = LoginControl;
+
+  @Output() login = new EventEmitter<ILoginFormValue>();
 
   constructor(private formService: LoginFormService) { }
 
@@ -30,5 +33,6 @@ export class LoginFormComponent implements OnInit {
   }
 
   logIn(){
+    this.login.emit(this.formService.value)
   }
 }

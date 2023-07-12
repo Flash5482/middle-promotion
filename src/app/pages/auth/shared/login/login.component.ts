@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { loginBgUrl } from "../../const";
+import { ILoginFormValue } from "./interfaces";
 
 @Component({
   selector: 'app-login',
@@ -18,5 +19,8 @@ export class LoginComponent {
 
   onFacebookLogin(){
 
+  }
+
+  onLogin(loginForm: ILoginFormValue){
   }
 }

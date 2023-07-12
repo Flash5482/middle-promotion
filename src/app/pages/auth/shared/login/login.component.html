@@ -6,7 +6,7 @@
       </div>
       <h1 class="title">Welcome back</h1>
       <p class="sub-title">Sign in to manage your account.</p>
-      <app-login-form></app-login-form>
+      <app-login-form (login)="onLogin($event)"></app-login-form>
 
       <div class="divider text-center">Or do it via other accounts</div>
 
@@ -29,7 +29,9 @@
       </div>
       <div class="sing-up text-center">
         <span>Don’t have an account?</span>
-        <a mat-button color="primary">Sign up</a>
+        <a mat-button color="primary" [routerLink]="['/auth/sign-up']"
+          >Sign up</a
+        >
       </div>
     </div>
   </div>
