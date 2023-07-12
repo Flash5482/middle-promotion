@@ -1,7 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="1" failures="0" errors="0" time="1.934">
-  <testsuite name="AppComponent" errors="0" failures="0" skipped="0" timestamp="2022-11-05T13:48:36" time="0.98" tests="1">
-    <testcase classname="AppComponent should create the app" name="AppComponent should create the app" time="0.042">
+<testsuites name="jest tests" tests="12" failures="0" errors="0" time="7.347">
+  <testsuite name="AuthComponent" errors="0" failures="0" skipped="0" timestamp="2023-07-12T09:21:39" time="2.86" tests="1">
+    <testcase classname="AuthComponent should create" name="AuthComponent should create" time="0.09">
+    </testcase>
+  </testsuite>
+  <testsuite name="NotFoundComponent" errors="0" failures="0" skipped="0" timestamp="2023-07-12T09:21:39" time="3.196" tests="1">
+    <testcase classname="NotFoundComponent should create" name="NotFoundComponent should create" time="0.089">
+    </testcase>
+  </testsuite>
+  <testsuite name="LoginFormComponent" errors="0" failures="0" skipped="0" timestamp="2023-07-12T09:21:39" time="3.291" tests="1">
+    <testcase classname="LoginFormComponent should create" name="LoginFormComponent should create" time="0.207">
+    </testcase>
+  </testsuite>
+  <testsuite name="BasicLoginLayoutComponent" errors="0" failures="0" skipped="0" timestamp="2023-07-12T09:21:39" time="3.399" tests="1">
+    <testcase classname="BasicLoginLayoutComponent should create" name="BasicLoginLayoutComponent should create" time="0.154">
+    </testcase>
+  </testsuite>
+  <testsuite name="DashboardComponent" errors="0" failures="0" skipped="0" timestamp="2023-07-12T09:21:39" time="3.331" tests="1">
+    <testcase classname="DashboardComponent should create" name="DashboardComponent should create" time="0.114">
+    </testcase>
+  </testsuite>
+  <testsuite name="SignUpComponent" errors="0" failures="0" skipped="0" timestamp="2023-07-12T09:21:39" time="3.558" tests="1">
+    <testcase classname="SignUpComponent should create" name="SignUpComponent should create" time="0.14">
+    </testcase>
+  </testsuite>
+  <testsuite name="LoginComponent" errors="0" failures="0" skipped="0" timestamp="2023-07-12T09:21:39" time="3.549" tests="1">
+    <testcase classname="LoginComponent should create" name="LoginComponent should create" time="0.201">
+    </testcase>
+  </testsuite>
+  <testsuite name="LoginFormService" errors="0" failures="0" skipped="0" timestamp="2023-07-12T09:21:42" time="1.412" tests="1">
+    <testcase classname="LoginFormService should be created" name="LoginFormService should be created" time="0.031">
+    </testcase>
+  </testsuite>
+  <testsuite name="AuthRedirectGuard" errors="0" failures="0" skipped="0" timestamp="2023-07-12T09:21:43" time="1.07" tests="1">
+    <testcase classname="AuthRedirectGuard should be created" name="AuthRedirectGuard should be created" time="0.019">
+    </testcase>
+  </testsuite>
+  <testsuite name="ClearObservableDirective" errors="0" failures="0" skipped="0" timestamp="2023-07-12T09:21:43" time="1.004" tests="1">
+    <testcase classname="ClearObservableDirective should create an instance" name="ClearObservableDirective should create an instance" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="BaseFormService" errors="0" failures="0" skipped="0" timestamp="2023-07-12T09:21:43" time="0.939" tests="1">
+    <testcase classname="BaseFormService should be created" name="BaseFormService should be created" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="AppComponent" errors="0" failures="0" skipped="0" timestamp="2023-07-12T09:21:43" time="1.161" tests="1">
+    <testcase classname="AppComponent should create the app" name="AppComponent should create the app" time="0.037">
     </testcase>
   </testsuite>
 </testsuites>
