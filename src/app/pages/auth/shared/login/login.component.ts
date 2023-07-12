@@ -11,6 +11,8 @@ export class LoginComponent {
 
   readonly loginBgUrl = loginBgUrl;
 
+  loginForm: ILoginFormValue;
+
   constructor() { }
 
   onGoogleLogin(){
@@ -22,5 +24,6 @@ export class LoginComponent {
   }
 
   onLogin(loginForm: ILoginFormValue){
+    this.loginForm = loginForm;
   }
 }
