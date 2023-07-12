@@ -1,24 +1,35 @@
 {
   "root": true,
-  "ignorePatterns": [
-    "projects/**/*"
-  ],
+  "ignorePatterns": ["projects/**/*", "utils/**", "test/**"],
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
+      "files": ["*.ts"],
       "parserOptions": {
-        "project": [
-          "tsconfig.json"
-        ],
+        "project": ["tsconfig.json"],
         "createDefaultProgram": true
       },
       "extends": [
+        "google",
         "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates"
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "prettier"
       ],
       "rules": {
+        "new-cap": "off",
+        "indent": "off",
+        "require-jsdoc": "off",
+        "no-console": "error",
+        "@typescript-eslint/no-unused-vars": ["error"],
+        "linebreak-style": "off",
+        "no-invalid-this": "off",
+        "object-curly-spacing": ["error", "always"],
+        "max-len": [
+          "error",
+          {
+            "code": 120,
+            "tabWidth": 2
+          }
+        ],
         "@angular-eslint/directive-selector": [
           "error",
           {
@@ -38,13 +49,23 @@
       }
     },
     {
-      "files": [
-        "*.html"
-      ],
-      "extends": [
-        "plugin:@angular-eslint/template/recommended"
-      ],
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
       "rules": {}
+    },
+    {
+      "files": ["*.html"],
+      "excludedFiles": ["*inline-template-*.component.html"],
+      "extends": ["plugin:prettier/recommended"],
+      "rules": {
+        "prettier/prettier": [
+          "error",
+          {
+            "endOfLine": "auto",
+            "parser": "angular"
+          }
+        ]
+      }
     }
   ]
 }

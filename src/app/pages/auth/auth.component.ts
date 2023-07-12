@@ -8,6 +8,5 @@ import { Component } from '@angular/core';
 export class AuthComponent {
 
   constructor() {
-    console.log('auth')
   }
 }

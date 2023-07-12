@@ -1,0 +1,77 @@
+@import "src/styles/variables";
+
+$divider-width: 30%;
+$divider-margin: 0;
+
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 470px;
+  height: 100%;
+  position: relative;
+}
+
+.img {
+  margin-bottom: 40px;
+}
+
+.title {
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.sub-title {
+  padding-bottom: 30px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.divider {
+  margin-top: 30px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border-bottom: solid 1px $medium-gray;
+    width: $divider-width;
+    top: 10px;
+  }
+
+  &::before {
+    left: $divider-margin;
+  }
+
+  &::after {
+    right: $divider-margin;
+  }
+}
+
+.button-wrapper {
+  width: fit-content;
+  margin: 30px auto 0;
+}
+
+.google-btn {
+  margin-right: 10px;
+  padding: 5px 10px;
+}
+
+.facebook-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+}
+
+.sing-up {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}

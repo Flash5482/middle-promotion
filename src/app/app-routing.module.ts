@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from "@angular/router";
-import {AuthRedirectGuard} from "./core/guards/auth-redirect.guard";
+import { RouterModule, Routes } from "@angular/router";
+import { AuthRedirectGuard } from "./core/guards/auth-redirect.guard";
 
 
 const routes: Routes = [

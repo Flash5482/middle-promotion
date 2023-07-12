@@ -1,0 +1,19 @@
+@import "src/styles/variables";
+
+.label {
+  font-family: Roboto, serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: $gray;
+}
+
+.login-button {
+  button {
+    height: 55px;
+    width: 100%;
+  }
+}
+
+.forgot-btn {
+  text-align: left;
+}
